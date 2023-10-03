@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculator App</title>
+</head>
+<body>
+    <div class="calc">
+        <input type="text" id="input-field">
+        <div class="buttons">
+            <div class="nums">
+                <button class="num" onclick="addToInput('7', false)">7</button>
+                <button class="num" onclick="addToInput('8', false)">8</button>
+                <button class="num" onclick="addToInput('9', false)">9</button>
+                <button class="num" onclick="addToInput('4', false)">4</button>
+                <button class="num" onclick="addToInput('5', false)">5</button>
+                <button class="num" onclick="addToInput('6', false)">6</button>
+                <button class="num" onclick="addToInput('1', false)">1</button>
+                <button class="num" onclick="addToInput('2', false)">2</button>
+                <button class="num" onclick="addToInput('3', false)">3</button>
+                <button class="num" onclick="addToInput('0', false)">0</button>
+                <button class="num" onclick="addToInput('.', false)">.</button>
+            </div>
+            <div class="operations">
+                <button class="operation" onclick="addToInput('/', true)">÷</button>
+                <button class="operation" onclick="addToInput('*', true)">x</button>
+                <button class="operation" onclick="addToInput('-', true)">-</button>
+                <button class="operation" onclick="addToInput('+', true)">+</button>
+                <button class="operation" onclick="calculate()">=</button>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
