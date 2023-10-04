@@ -1,15 +1,11 @@
 html {
-    font-size: 62.5%;
+    font-size: 30px;
 }
 
-.calc {
+.calculator {
     width: 50%;
     height: 50%;
     margin: 0 auto;
-}
-
-#input-field {
-    width: 100%;
 }
 
 .buttons {
@@ -18,19 +14,19 @@ html {
     height: 100px;
 }
 
-.nums {
+.number-btns {
     display:flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-around;
-    width: 75px;
+    width: 20%;
 }
 
-.num {
+.number-btn {
     width: 2rem;
 }
 
-.operations {
+.operation-btns {
     display: flex;
     flex-flow: column wrap;
 }
