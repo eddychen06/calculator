@@ -7,12 +7,13 @@ class Calculator {
     }
 
     addNumber(number) {
+
         this.current += number
         document.querySelector("#current").innerHTML = this.current
     }
 
     addOperation(operation) {
-        this.previous = this.current + ` ${operation}`
+        this.previous = this.current
         document.querySelector("#previous").innerHTML = this.previous
         document.querySelector("#current").innerHTML = ""
         this.current = ""
@@ -21,7 +22,7 @@ class Calculator {
 
     compute() {
         switch (this.operation) {
-            case "x":
+            case "×":
                 this.result = parseFloat(this.previous) * parseFloat(this.current)
                 break
             case "÷":
@@ -30,13 +31,17 @@ class Calculator {
             case "+":
                 this.result = parseFloat(this.previous) + parseFloat(this.current)
                 break
-            case "-":
+            case "−":
                 this.result = parseFloat(this.previous) - parseFloat(this.current)
                 break
         }
 
         document.querySelector("#previous").innerHTML = ""
         document.querySelector("#current").innerHTML = this.result
+
+        document.querySelector(`#${this.operation}`).style.background = "#FF9F0A"
+        document.querySelector(`#${this.operation}`).style.color = "white"
+
 
         this.current = this.result
     }
@@ -62,6 +67,8 @@ numberBtns.forEach(button => {
 operationBtns.forEach(button => {
     button.addEventListener("click", function () {
         calculator.addOperation(button.innerHTML)
+        button.style.background = "white"
+        button.style.color = "#FF9F0A"
     })
 })
 
